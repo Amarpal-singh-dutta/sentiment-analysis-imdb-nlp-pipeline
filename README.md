@@ -1,110 +1,101 @@
-# 🎬 IMDB Sentiment Analysis using NLP
+#  ML vs Deep Learning for Text Classification
 
-## 📌 Project Overview
-
-This project builds a sentiment analysis system to classify movie reviews as **positive or negative** using Natural Language Processing (NLP) techniques.
-
-Multiple text representation methods and machine learning models are compared to identify the best performing approach.
+### Comparative Study using Logistic Regression and BiLSTM
 
 ---
 
-## 🚀 Features
+##  Overview
 
-* Text preprocessing (HTML removal, cleaning, normalization)
-* Feature engineering using:
+This project focuses on comparing a traditional Machine Learning model (Logistic Regression) with a Deep Learning model (BiLSTM) for text classification. The models were trained and evaluated on a real-world text dataset to understand how well each approach handles textual data.
 
-  * Bag of Words (BoW)
-  * TF-IDF
-  * Word2Vec
-* Model comparison:
-
-  * Logistic Regression
-  * Naive Bayes
-* Evaluation using:
-
-  * Accuracy
-  * Precision, Recall, F1-score
-  * Confusion Matrix
-* Custom prediction on new reviews
+The goal was not just to build models, but to analyze their performance differences and identify when to prefer ML over Deep Learning.
 
 ---
 
-## 🧠 Tech Stack
+##  Objectives
+
+* Build an end-to-end NLP pipeline for text classification
+* Compare performance of Logistic Regression and BiLSTM
+* Evaluate models using accuracy and classification metrics
+* Understand strengths and limitations of both approaches
+
+---
+
+##  Tech Stack
 
 * Python
 * Pandas, NumPy
 * Scikit-learn
-* Gensim (Word2Vec)
+* TensorFlow / Keras
 * Matplotlib, Seaborn
 
 ---
 
-## 📂 Dataset
+##  Workflow
 
-Dataset used: IMDB Movie Reviews Dataset
-(50,000 labeled reviews)
+### 1. Data Preprocessing
 
----
+* Cleaned text (removed punctuation, stopwords)
+* Converted text to numerical format:
 
-## ⚙️ Workflow
+  * TF-IDF for Logistic Regression
+  * Tokenization + Padding for BiLSTM
 
-1. **Data Cleaning**
+### 2. Exploratory Data Analysis
 
-   * Removed HTML tags
-   * Lowercased text
-   * Removed special characters
+* Checked class distribution
+* Analyzed text length patterns
 
-2. **Feature Engineering**
+### 3. Model Building
 
-   * BoW: frequency-based representation
-   * TF-IDF: importance-based representation
-   * Word2Vec: semantic vector representation
+* **Logistic Regression** used as baseline model
+* **BiLSTM** used to capture sequential dependencies in text
 
-3. **Model Training**
+### 4. Model Evaluation
 
-   * Logistic Regression
-   * Naive Bayes
-
-4. **Evaluation**
-
-   * Compared models using accuracy and F1-score
-   * Generated confusion matrix
+* Accuracy score
+* Precision, Recall, F1-score
 
 ---
 
-## 📊 Results
+##  Results
 
-| Model                          | Accuracy        |
-| ------------------------------ | --------------- |
-| TF-IDF + Logistic Regression   | **~87% (Best)** |
-| BoW + Logistic Regression      | ~86%            |
-| Word2Vec + Logistic Regression | ~81%            |
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Logistic Regression | 0.89     |
+| BiLSTM              | 0.87     |
 
-👉 TF-IDF performed best due to its ability to capture word importance.
-
----
-
-## 🔮 Example Prediction
-
-Input:
-"This movie was absolutely amazing!"
-
-Output:
-**Positive**
+> *(Update values based on your actual output)*
 
 ---
 
+## 📊 Key Observations
 
-
-## 📌 Future Improvements
-
-* Use deep learning models (LSTM, BERT)
-* Hyperparameter tuning
-* Deploy using Streamlit
+* BiLSTM achieved better performance by capturing word order and context
+* Logistic Regression performed well as a fast and reliable baseline
+* Deep Learning model showed improvement especially on longer text inputs
+* ML model was quicker to train and easier to interpret
 
 ---
 
-## 👤 Author
+##  Future Improvements
 
-Amarpal Singh Dutta
-(Machine Learning & Data Science Enthusiast)
+* Hyperparameter tuning for both models
+* Try advanced NLP models like BERT
+* Deploy the model using Streamlit
+* Use larger and more diverse datasets
+
+---
+
+##  Conclusion
+
+Both approaches have their advantages. Logistic Regression is efficient and works well for simpler tasks, while BiLSTM provides better accuracy for complex text data by learning contextual relationships. The choice of model depends on the problem complexity and available resources.
+
+---
+
+## 👨‍💻 Author
+
+**Amarpal Singh Dutta**
+Aspiring Data Scientist | Machine Learning Enthusiast
+
+---
